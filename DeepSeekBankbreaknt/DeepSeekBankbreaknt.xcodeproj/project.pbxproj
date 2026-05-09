@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		008F5493ABC9F78533F7B075 /* MenuBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C2A02C6463EBC097F24067 /* MenuBarView.swift */; };
+		1129FA420B1A8011A93C89E7 /* RefreshStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = A97A10A027FE4E88872CA25E /* RefreshStatus.swift */; };
+		1A44F891BB3C80B1C2F476A4 /* CredentialsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B8EEFD4AED1A0A1F22AA1 /* CredentialsStore.swift */; };
+		265349982C317C04DBB80C8C /* DeepSeekBankbreakntApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A33B63AD3D2F0D983472E /* DeepSeekBankbreakntApp.swift */; };
+		340CB2E121D1E540893B4D65 /* BalanceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894AE4A696603F18997A3D39 /* BalanceError.swift */; };
+		40598B5DFDB9BB17F8C35BC7 /* BalanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464A4A815EDFAB51D8BA32A1 /* BalanceViewModel.swift */; };
+		506DE36F2DA56E2DE5FB3C80 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9BEEEDDF6874FD30D1F36F5 /* Localizable.strings */; };
+		5815ECFA2C05BC3410692518 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B5F6A729F331F08967919C /* NetworkService.swift */; };
+		71CA4AB74AF7137D22157D61 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5527B3E6826BDD51EAE468 /* Formatters.swift */; };
+		790E48EE3677F6DA3E6639B5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C00BEDE171A4AF298FF059 /* SettingsView.swift */; };
+		AB90E1C2AA0D87798CE65C93 /* BalanceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4E5DE3B25710AA6EDDF602 /* BalanceProvider.swift */; };
+		AC7FDFD0C41979B69A9C0FF6 /* DeepSeekProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6466B04776E1F3EF2C24DA2 /* DeepSeekProvider.swift */; };
+		C2549EF47C075C289E94D98E /* RefreshFrequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD516686C135AB87C1F42AA /* RefreshFrequency.swift */; };
+		D9EF79BC4021739948719FE4 /* MockBalanceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = F705691F0CEE28B4127A1FE1 /* MockBalanceProvider.swift */; };
+		DD569271DCA63A8B41EB793B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 489EA03021B0C1470346E8A1 /* Assets.xcassets */; };
+		E5D10FC65E3664C9CA01DAFA /* L10n.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF1C3CAAE93237E09D8E7725 /* L10n.swift */; };
+		E75D23691924FB0049A9A4F2 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6809F73D1E7508C8C0E140E /* Logger.swift */; };
+		E97D72DFD4CEF9B892F060F3 /* BalanceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C981357ADE7F86ECE56E48 /* BalanceInfo.swift */; };
+		E9F6E5D9B73AA7CC5CC82787 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BC2BB1BB0E46ED8D98072C /* SettingsStore.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		11B5F6A729F331F08967919C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		22AC2897FF4E4A0C1DF552EF /* DeepSeekBankbreaknt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepSeekBankbreaknt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E5B8EEFD4AED1A0A1F22AA1 /* CredentialsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsStore.swift; sourceTree = "<group>"; };
+		464A4A815EDFAB51D8BA32A1 /* BalanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewModel.swift; sourceTree = "<group>"; };
+		489EA03021B0C1470346E8A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		57BC2BB1BB0E46ED8D98072C /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		6D4E5DE3B25710AA6EDDF602 /* BalanceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceProvider.swift; sourceTree = "<group>"; };
+		6DD516686C135AB87C1F42AA /* RefreshFrequency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshFrequency.swift; sourceTree = "<group>"; };
+		71C981357ADE7F86ECE56E48 /* BalanceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceInfo.swift; sourceTree = "<group>"; };
+		894AE4A696603F18997A3D39 /* BalanceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceError.swift; sourceTree = "<group>"; };
+		89C00BEDE171A4AF298FF059 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9D5527B3E6826BDD51EAE468 /* Formatters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Formatters.swift; sourceTree = "<group>"; };
+		A97A10A027FE4E88872CA25E /* RefreshStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshStatus.swift; sourceTree = "<group>"; };
+		B556163913D78AEE6FF41366 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		B7C2A02C6463EBC097F24067 /* MenuBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarView.swift; sourceTree = "<group>"; };
+		BF1C3CAAE93237E09D8E7725 /* L10n.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = L10n.swift; sourceTree = "<group>"; };
+		D6466B04776E1F3EF2C24DA2 /* DeepSeekProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepSeekProvider.swift; sourceTree = "<group>"; };
+		D6809F73D1E7508C8C0E140E /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
+		DE5A33B63AD3D2F0D983472E /* DeepSeekBankbreakntApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeepSeekBankbreakntApp.swift; sourceTree = "<group>"; };
+		F4DC79D8C46A7D664C719145 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		F705691F0CEE28B4127A1FE1 /* MockBalanceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBalanceProvider.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		0C4B40589EECEBAC5EE914F7 = {
+			isa = PBXGroup;
+			children = (
+				4D2D56FA5F0CE08F1F99037C /* App */,
+				817378A5C73855BE7BDFAE38 /* Models */,
+				D0CA8D813496B451D521A9BE /* Providers */,
+				C34B94094D543B8C2A9A32B4 /* Resources */,
+				1BB39CF1EB706EE506392FD0 /* Services */,
+				D97C2A4F5DF0B7D1D1EF725F /* Utils */,
+				7959DA44AD608BDB1D25D0CD /* ViewModels */,
+				6DC56BB8F5EF1DDD643B658E /* Views */,
+				E0111111E9F9863062C12E25 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1BB39CF1EB706EE506392FD0 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				3E5B8EEFD4AED1A0A1F22AA1 /* CredentialsStore.swift */,
+				11B5F6A729F331F08967919C /* NetworkService.swift */,
+				57BC2BB1BB0E46ED8D98072C /* SettingsStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4D2D56FA5F0CE08F1F99037C /* App */ = {
+			isa = PBXGroup;
+			children = (
+				DE5A33B63AD3D2F0D983472E /* DeepSeekBankbreakntApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		6DC56BB8F5EF1DDD643B658E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B7C2A02C6463EBC097F24067 /* MenuBarView.swift */,
+				89C00BEDE171A4AF298FF059 /* SettingsView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		7959DA44AD608BDB1D25D0CD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				464A4A815EDFAB51D8BA32A1 /* BalanceViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		817378A5C73855BE7BDFAE38 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				894AE4A696603F18997A3D39 /* BalanceError.swift */,
+				71C981357ADE7F86ECE56E48 /* BalanceInfo.swift */,
+				6DD516686C135AB87C1F42AA /* RefreshFrequency.swift */,
+				A97A10A027FE4E88872CA25E /* RefreshStatus.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C34B94094D543B8C2A9A32B4 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				489EA03021B0C1470346E8A1 /* Assets.xcassets */,
+				F9BEEEDDF6874FD30D1F36F5 /* Localizable.strings */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D0CA8D813496B451D521A9BE /* Providers */ = {
+			isa = PBXGroup;
+			children = (
+				6D4E5DE3B25710AA6EDDF602 /* BalanceProvider.swift */,
+				D6466B04776E1F3EF2C24DA2 /* DeepSeekProvider.swift */,
+				F705691F0CEE28B4127A1FE1 /* MockBalanceProvider.swift */,
+			);
+			path = Providers;
+			sourceTree = "<group>";
+		};
+		D97C2A4F5DF0B7D1D1EF725F /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				9D5527B3E6826BDD51EAE468 /* Formatters.swift */,
+				BF1C3CAAE93237E09D8E7725 /* L10n.swift */,
+				D6809F73D1E7508C8C0E140E /* Logger.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		E0111111E9F9863062C12E25 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22AC2897FF4E4A0C1DF552EF /* DeepSeekBankbreaknt.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93A4DF200A7F92EEF80B4F91 /* DeepSeekBankbreaknt */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F880D9651D30E7505AC66247 /* Build configuration list for PBXNativeTarget "DeepSeekBankbreaknt" */;
+			buildPhases = (
+				2D3FC5E0B8D28F3FC9E65749 /* Sources */,
+				D5BC916C31F0CC0735013DCC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DeepSeekBankbreaknt;
+			packageProductDependencies = (
+			);
+			productName = DeepSeekBankbreaknt;
+			productReference = 22AC2897FF4E4A0C1DF552EF /* DeepSeekBankbreaknt.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2BAF395E138E589019F634E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+				};
+			};
+			buildConfigurationList = 687857ADAD18CBE02AF7CE5C /* Build configuration list for PBXProject "DeepSeekBankbreaknt" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				"zh-Hans",
+			);
+			mainGroup = 0C4B40589EECEBAC5EE914F7;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = E0111111E9F9863062C12E25 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93A4DF200A7F92EEF80B4F91 /* DeepSeekBankbreaknt */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D5BC916C31F0CC0735013DCC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DD569271DCA63A8B41EB793B /* Assets.xcassets in Resources */,
+				506DE36F2DA56E2DE5FB3C80 /* Localizable.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2D3FC5E0B8D28F3FC9E65749 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				340CB2E121D1E540893B4D65 /* BalanceError.swift in Sources */,
+				E97D72DFD4CEF9B892F060F3 /* BalanceInfo.swift in Sources */,
+				AB90E1C2AA0D87798CE65C93 /* BalanceProvider.swift in Sources */,
+				40598B5DFDB9BB17F8C35BC7 /* BalanceViewModel.swift in Sources */,
+				1A44F891BB3C80B1C2F476A4 /* CredentialsStore.swift in Sources */,
+				265349982C317C04DBB80C8C /* DeepSeekBankbreakntApp.swift in Sources */,
+				AC7FDFD0C41979B69A9C0FF6 /* DeepSeekProvider.swift in Sources */,
+				71CA4AB74AF7137D22157D61 /* Formatters.swift in Sources */,
+				E5D10FC65E3664C9CA01DAFA /* L10n.swift in Sources */,
+				E75D23691924FB0049A9A4F2 /* Logger.swift in Sources */,
+				008F5493ABC9F78533F7B075 /* MenuBarView.swift in Sources */,
+				D9EF79BC4021739948719FE4 /* MockBalanceProvider.swift in Sources */,
+				5815ECFA2C05BC3410692518 /* NetworkService.swift in Sources */,
+				C2549EF47C075C289E94D98E /* RefreshFrequency.swift in Sources */,
+				1129FA420B1A8011A93C89E7 /* RefreshStatus.swift in Sources */,
+				E9F6E5D9B73AA7CC5CC82787 /* SettingsStore.swift in Sources */,
+				790E48EE3677F6DA3E6639B5 /* SettingsView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F9BEEEDDF6874FD30D1F36F5 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B556163913D78AEE6FF41366 /* en */,
+				F4DC79D8C46A7D664C719145 /* zh-Hans */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A09CDFBA66A10E831FE55EE6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Debug;
+		};
+		A9F456BE921DFD7176A57FAA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = NO;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.9;
+			};
+			name = Release;
+		};
+		EAC3D9BBE67829A49B902A03 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DeepSeekBankbreaknt.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "DeepSeek Bankbreaknt";
+				INFOPLIST_KEY_LSUIElement = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deepseek.bankbreaknt;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		F3B39DFE1E6F612B358638C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = DeepSeekBankbreaknt.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_KEY_CFBundleDisplayName = "DeepSeek Bankbreaknt";
+				INFOPLIST_KEY_LSUIElement = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MARKETING_VERSION = 1.0.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.deepseek.bankbreaknt;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		687857ADAD18CBE02AF7CE5C /* Build configuration list for PBXProject "DeepSeekBankbreaknt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A09CDFBA66A10E831FE55EE6 /* Debug */,
+				A9F456BE921DFD7176A57FAA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		F880D9651D30E7505AC66247 /* Build configuration list for PBXNativeTarget "DeepSeekBankbreaknt" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EAC3D9BBE67829A49B902A03 /* Debug */,
+				F3B39DFE1E6F612B358638C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2BAF395E138E589019F634E /* Project object */;
+}
