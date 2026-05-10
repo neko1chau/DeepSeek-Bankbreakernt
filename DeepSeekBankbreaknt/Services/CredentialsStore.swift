@@ -2,23 +2,21 @@ import Foundation
 
 final class CredentialsStore {
     static let shared = CredentialsStore()
-    
-    private let userDefaults = UserDefaults.standard
-    private let apiKeyKey = "deepseek_bankbreaknt_apikey"
-    
+
     private init() {}
-    
+
     var apiKey: String? {
-        get {
-            return userDefaults.string(forKey: apiKeyKey)
-        }
+        get { KeychainStore.read() }
         set {
-            userDefaults.set(newValue, forKey: apiKeyKey)
-            AppLogger.log("API key saved")
+            if let key = newValue {
+                KeychainStore.save(key)
+            } else {
+                KeychainStore.delete()
+            }
         }
     }
-    
+
     var hasAPIKey: Bool {
-        apiKey?.isEmpty == false
+        KeychainStore.exists()
     }
 }

@@ -1,0 +1,6 @@
+.DS_Store
+.Spotlight-V100
+.Trashes
+*.dmg
+*.app
+xcuserdata/

@@ -14,7 +14,7 @@ enum AppLogger {
     static func log(_ message: String) {
         guard isEnabled else { return }
         let info = message.withCString { cString in
-            os_log("%{public}c", log: logger, type: .info, cString)
+            os_log("%{private}c", log: logger, type: .info, cString)
         }
         _ = info
     }

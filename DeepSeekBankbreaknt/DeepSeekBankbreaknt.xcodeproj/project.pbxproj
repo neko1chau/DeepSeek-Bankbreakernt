@@ -26,12 +26,14 @@
 		E75D23691924FB0049A9A4F2 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6809F73D1E7508C8C0E140E /* Logger.swift */; };
 		E97D72DFD4CEF9B892F060F3 /* BalanceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C981357ADE7F86ECE56E48 /* BalanceInfo.swift */; };
 		E9F6E5D9B73AA7CC5CC82787 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BC2BB1BB0E46ED8D98072C /* SettingsStore.swift */; };
+		F1E2D3C4B5A6F7E8D9C0B1A2 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6A7B8C9D0E1F2 /* KeychainStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11B5F6A729F331F08967919C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		22AC2897FF4E4A0C1DF552EF /* DeepSeekBankbreaknt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepSeekBankbreaknt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E5B8EEFD4AED1A0A1F22AA1 /* CredentialsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsStore.swift; sourceTree = "<group>"; };
+		A1B2C3D4E5F6A7B8C9D0E1F2 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		464A4A815EDFAB51D8BA32A1 /* BalanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewModel.swift; sourceTree = "<group>"; };
 		489EA03021B0C1470346E8A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57BC2BB1BB0E46ED8D98072C /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				3E5B8EEFD4AED1A0A1F22AA1 /* CredentialsStore.swift */,
+				A1B2C3D4E5F6A7B8C9D0E1F2 /* KeychainStore.swift */,
 				11B5F6A729F331F08967919C /* NetworkService.swift */,
 				57BC2BB1BB0E46ED8D98072C /* SettingsStore.swift */,
 			);
@@ -180,8 +183,6 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1500;
-				TargetAttributes = {
-				};
 			};
 			buildConfigurationList = 687857ADAD18CBE02AF7CE5C /* Build configuration list for PBXProject "DeepSeekBankbreaknt" */;
 			developmentRegion = en;
@@ -229,6 +230,7 @@
 				AC7FDFD0C41979B69A9C0FF6 /* DeepSeekProvider.swift in Sources */,
 				71CA4AB74AF7137D22157D61 /* Formatters.swift in Sources */,
 				E5D10FC65E3664C9CA01DAFA /* L10n.swift in Sources */,
+				F1E2D3C4B5A6F7E8D9C0B1A2 /* KeychainStore.swift in Sources */,
 				E75D23691924FB0049A9A4F2 /* Logger.swift in Sources */,
 				008F5493ABC9F78533F7B075 /* MenuBarView.swift in Sources */,
 				D9EF79BC4021739948719FE4 /* MockBalanceProvider.swift in Sources */,
@@ -399,6 +401,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.deepseek.bankbreaknt;
 				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -421,6 +424,7 @@
 				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.deepseek.bankbreaknt;
 				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
