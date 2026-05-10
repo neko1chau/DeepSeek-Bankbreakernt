@@ -31,10 +31,11 @@ struct SettingsView: View {
             
             Section {
                 aboutSection
+                updateSection
             } header: { Text(L10n.About.title) }
         }
         .formStyle(.grouped)
-        .frame(width: 400, height: 420)
+        .frame(width: 400, height: 480)
         .onAppear {
             apiKeyInput = CredentialsStore.shared.apiKey ?? ""
             launchAtLogin = SettingsStore.shared.launchAtLogin
@@ -46,22 +47,30 @@ struct SettingsView: View {
     private var apiKeySection: some View {
         VStack(alignment: .leading, spacing: 8) {
             SecureField("API Key", text: $apiKeyInput).textFieldStyle(.roundedBorder)
-            
+
             HStack {
                 Button(action: testConnection) {
-                    HStack { if isTesting { ProgressView().scaleEffect(0.6) }; Text(L10n.TestConnection.button) }
+                    HStack(spacing: 4) {
+                        if isTesting { ProgressView().controlSize(.small) }
+                        Text(L10n.TestConnection.button)
+                    }
                 }
+                .controlSize(.small)
                 .disabled(apiKeyInput.isEmpty || isTesting)
-                
+
                 Button(action: saveAPIKey) {
-                    HStack { if isSaving { ProgressView().scaleEffect(0.6) }; Text(L10n.Save.button) }
+                    HStack(spacing: 4) {
+                        if isSaving { ProgressView().controlSize(.small) }
+                        Text(L10n.Save.button)
+                    }
                 }
+                .controlSize(.small)
                 .disabled(apiKeyInput.isEmpty || isSaving)
                 .buttonStyle(.borderedProminent)
-                
+
                 Spacer()
             }
-            
+
             if showTestResult {
                 HStack {
                     Image(systemName: testResultSuccess ? "checkmark.circle.fill" : "xmark.circle.fill")
@@ -110,12 +119,56 @@ struct SettingsView: View {
     
     private var aboutSection: some View {
         VStack(alignment: .leading, spacing: 4) {
-            LabeledContent(L10n.Version.title, value: "1.0.0")
+            LabeledContent(L10n.Version.title, value: "1.0.2")
             LabeledContent("Build", value: "1")
             Text("很惭愧，只做了一点微小的工作。").font(.caption).foregroundColor(.secondary)
             LabeledContent("Credits", value: "Toast1 Vibe Coding")
-            Spacer()
             HStack { Toggle(L10n.UseMockProvider.title, isOn: $viewModel.useMockProvider); Spacer() }
+        }
+    }
+
+    private var updateSection: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            switch viewModel.updateState {
+            case .idle:
+                Button(action: { Task { await viewModel.checkForUpdate() } }) {
+                    HStack { Image(systemName: "arrow.down.circle"); Text("Check for Updates") }
+                }
+            case .checking:
+                HStack { ProgressView(); Text("Checking..."); Spacer() }
+            case .available(let release):
+                VStack(alignment: .leading, spacing: 4) {
+                    HStack {
+                        Image(systemName: "arrow.down.circle.fill").foregroundColor(.green)
+                        Text("Version \(release.version) available").fontWeight(.medium)
+                    }
+                    Text("Release: \(release.tagName)").font(.caption).foregroundColor(.secondary)
+                    HStack {
+                        Button("Download") { Task { await viewModel.downloadUpdate() } }
+                            .buttonStyle(.borderedProminent)
+                        Button("Dismiss") { viewModel.dismissUpdate() }
+                    }
+                }
+            case .downloading(let progress):
+                VStack(alignment: .leading, spacing: 4) {
+                    Text("Downloading...")
+                    ProgressView(value: progress).progressViewStyle(.linear)
+                    Text("\(Int(progress * 100))%").font(.caption).foregroundColor(.secondary)
+                }
+            case .ready:
+                HStack {
+                    Image(systemName: "checkmark.circle.fill").foregroundColor(.green)
+                    Text("Update Ready")
+                    Button("Install & Restart") { viewModel.installUpdate() }
+                        .buttonStyle(.borderedProminent)
+                }
+            case .error(let message):
+                HStack {
+                    Image(systemName: "exclamationmark.circle.fill").foregroundColor(.red)
+                    Text(message).font(.caption).foregroundColor(.red)
+                    Button("Retry") { Task { await viewModel.checkForUpdate() } }
+                }
+            }
         }
     }
     

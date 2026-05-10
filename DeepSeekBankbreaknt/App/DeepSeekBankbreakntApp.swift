@@ -24,6 +24,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     private var settingsWindow: NSWindow?
     private var cancellable: AnyCancellable?
     private var observer: NSObjectProtocol?
+    private var eventMonitor: Any?
     
     override init() {
         self.viewModel = BalanceViewModel()
@@ -87,24 +88,49 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @MainActor
     private func updateButtonTitle() {
         guard let button = statusItem?.button else { return }
-        button.title = " \(viewModel.menuBarTitle)"
+        let text = viewModel.menuBarTitle
+        let attributes: [NSAttributedString.Key: Any] = [
+            .font: NSFont.monospacedDigitSystemFont(ofSize: NSFont.systemFontSize, weight: .medium)
+        ]
+        button.attributedTitle = NSAttributedString(string: text, attributes: attributes)
     }
     
     @objc private func togglePopover() {
         guard let button = statusItem?.button else { return }
-        
+
         if popOver?.isShown == true {
-            popOver?.performClose(nil)
+            closePopover()
             return
         }
-        
+
         let popOver = NSPopover()
         popOver.contentSize = NSSize(width: 280, height: 340)
         popOver.behavior = .transient
         popOver.contentViewController = NSHostingController(rootView: MenuBarView(viewModel: viewModel, appDelegate: self))
-        
+
         popOver.show(relativeTo: button.bounds, of: button, preferredEdge: .minY)
         self.popOver = popOver
+        startEventMonitor()
+    }
+
+    private func closePopover() {
+        popOver?.performClose(nil)
+        stopEventMonitor()
+    }
+
+    private func startEventMonitor() {
+        eventMonitor = NSEvent.addGlobalMonitorForEvents(matching: [.leftMouseDown, .rightMouseDown]) { [weak self] _ in
+            if self?.popOver?.isShown == true {
+                self?.closePopover()
+            }
+        }
+    }
+
+    private func stopEventMonitor() {
+        if let monitor = eventMonitor {
+            NSEvent.removeMonitor(monitor)
+            eventMonitor = nil
+        }
     }
     
     func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {

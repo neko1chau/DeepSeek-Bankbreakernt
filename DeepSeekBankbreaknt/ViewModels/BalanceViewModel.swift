@@ -44,6 +44,17 @@ final class BalanceViewModel: ObservableObject {
     }
     
     @Published var useMockProvider: Bool = false
+
+    @Published private(set) var updateState: UpdateState = .idle
+
+    enum UpdateState: Equatable {
+        case idle
+        case checking
+        case available(ReleaseInfo)
+        case downloading(Double)
+        case ready(URL)
+        case error(String)
+    }
     
     private var provider: BalanceProvider {
         useMockProvider ? mockProvider : realProvider
@@ -242,6 +253,46 @@ final class BalanceViewModel: ObservableObject {
         autoRefreshTask?.cancel()
         refreshTask?.cancel()
         NSApplication.shared.terminate(nil)
+    }
+
+    func checkForUpdate() async {
+        updateState = .checking
+        do {
+            if let release = try await UpdateService.shared.checkForUpdate() {
+                updateState = .available(release)
+            } else {
+                updateState = .idle
+            }
+        } catch {
+            updateState = .error(error.localizedDescription)
+        }
+    }
+
+    func downloadUpdate() async {
+        guard case .available(let release) = updateState else { return }
+
+        updateState = .downloading(0)
+
+        do {
+            let url = try await UpdateService.shared.downloadUpdate(from: release.downloadUrl) { [weak self] progress in
+                Task { @MainActor in
+                    self?.updateState = .downloading(progress)
+                }
+            }
+            updateState = .ready(url)
+        } catch {
+            updateState = .error(error.localizedDescription)
+        }
+    }
+
+    func installUpdate() {
+        guard case .ready(let url) = updateState else { return }
+        NSWorkspace.shared.open(url)
+        quit()
+    }
+
+    func dismissUpdate() {
+        updateState = .idle
     }
 }
 

@@ -12,11 +12,13 @@
 		1A44F891BB3C80B1C2F476A4 /* CredentialsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5B8EEFD4AED1A0A1F22AA1 /* CredentialsStore.swift */; };
 		265349982C317C04DBB80C8C /* DeepSeekBankbreakntApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE5A33B63AD3D2F0D983472E /* DeepSeekBankbreakntApp.swift */; };
 		340CB2E121D1E540893B4D65 /* BalanceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894AE4A696603F18997A3D39 /* BalanceError.swift */; };
+		37161F570D6FB775115450B2 /* UpdateService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61FA2314515FA09FBF48F9DB /* UpdateService.swift */; };
 		40598B5DFDB9BB17F8C35BC7 /* BalanceViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 464A4A815EDFAB51D8BA32A1 /* BalanceViewModel.swift */; };
 		506DE36F2DA56E2DE5FB3C80 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F9BEEEDDF6874FD30D1F36F5 /* Localizable.strings */; };
 		5815ECFA2C05BC3410692518 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11B5F6A729F331F08967919C /* NetworkService.swift */; };
 		71CA4AB74AF7137D22157D61 /* Formatters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D5527B3E6826BDD51EAE468 /* Formatters.swift */; };
 		790E48EE3677F6DA3E6639B5 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89C00BEDE171A4AF298FF059 /* SettingsView.swift */; };
+		8148F842467DA521E22CE419 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A8D85A88B5C9614BAD3F5CA /* KeychainStore.swift */; };
 		AB90E1C2AA0D87798CE65C93 /* BalanceProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6D4E5DE3B25710AA6EDDF602 /* BalanceProvider.swift */; };
 		AC7FDFD0C41979B69A9C0FF6 /* DeepSeekProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6466B04776E1F3EF2C24DA2 /* DeepSeekProvider.swift */; };
 		C2549EF47C075C289E94D98E /* RefreshFrequency.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6DD516686C135AB87C1F42AA /* RefreshFrequency.swift */; };
@@ -26,17 +28,17 @@
 		E75D23691924FB0049A9A4F2 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6809F73D1E7508C8C0E140E /* Logger.swift */; };
 		E97D72DFD4CEF9B892F060F3 /* BalanceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C981357ADE7F86ECE56E48 /* BalanceInfo.swift */; };
 		E9F6E5D9B73AA7CC5CC82787 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57BC2BB1BB0E46ED8D98072C /* SettingsStore.swift */; };
-		F1E2D3C4B5A6F7E8D9C0B1A2 /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1B2C3D4E5F6A7B8C9D0E1F2 /* KeychainStore.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		11B5F6A729F331F08967919C /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		22AC2897FF4E4A0C1DF552EF /* DeepSeekBankbreaknt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeepSeekBankbreaknt.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A8D85A88B5C9614BAD3F5CA /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		3E5B8EEFD4AED1A0A1F22AA1 /* CredentialsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsStore.swift; sourceTree = "<group>"; };
-		A1B2C3D4E5F6A7B8C9D0E1F2 /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
 		464A4A815EDFAB51D8BA32A1 /* BalanceViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceViewModel.swift; sourceTree = "<group>"; };
 		489EA03021B0C1470346E8A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		57BC2BB1BB0E46ED8D98072C /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		61FA2314515FA09FBF48F9DB /* UpdateService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateService.swift; sourceTree = "<group>"; };
 		6D4E5DE3B25710AA6EDDF602 /* BalanceProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceProvider.swift; sourceTree = "<group>"; };
 		6DD516686C135AB87C1F42AA /* RefreshFrequency.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefreshFrequency.swift; sourceTree = "<group>"; };
 		71C981357ADE7F86ECE56E48 /* BalanceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceInfo.swift; sourceTree = "<group>"; };
@@ -74,9 +76,10 @@
 			isa = PBXGroup;
 			children = (
 				3E5B8EEFD4AED1A0A1F22AA1 /* CredentialsStore.swift */,
-				A1B2C3D4E5F6A7B8C9D0E1F2 /* KeychainStore.swift */,
+				3A8D85A88B5C9614BAD3F5CA /* KeychainStore.swift */,
 				11B5F6A729F331F08967919C /* NetworkService.swift */,
 				57BC2BB1BB0E46ED8D98072C /* SettingsStore.swift */,
+				61FA2314515FA09FBF48F9DB /* UpdateService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -183,6 +186,8 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = YES;
 				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+				};
 			};
 			buildConfigurationList = 687857ADAD18CBE02AF7CE5C /* Build configuration list for PBXProject "DeepSeekBankbreaknt" */;
 			developmentRegion = en;
@@ -229,8 +234,8 @@
 				265349982C317C04DBB80C8C /* DeepSeekBankbreakntApp.swift in Sources */,
 				AC7FDFD0C41979B69A9C0FF6 /* DeepSeekProvider.swift in Sources */,
 				71CA4AB74AF7137D22157D61 /* Formatters.swift in Sources */,
+				8148F842467DA521E22CE419 /* KeychainStore.swift in Sources */,
 				E5D10FC65E3664C9CA01DAFA /* L10n.swift in Sources */,
-				F1E2D3C4B5A6F7E8D9C0B1A2 /* KeychainStore.swift in Sources */,
 				E75D23691924FB0049A9A4F2 /* Logger.swift in Sources */,
 				008F5493ABC9F78533F7B075 /* MenuBarView.swift in Sources */,
 				D9EF79BC4021739948719FE4 /* MockBalanceProvider.swift in Sources */,
@@ -239,6 +244,7 @@
 				1129FA420B1A8011A93C89E7 /* RefreshStatus.swift in Sources */,
 				E9F6E5D9B73AA7CC5CC82787 /* SettingsStore.swift in Sources */,
 				790E48EE3677F6DA3E6639B5 /* SettingsView.swift in Sources */,
+				37161F570D6FB775115450B2 /* UpdateService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,10 +404,9 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.deepseek.bankbreaknt;
 				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -421,10 +426,9 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.0.2;
 				PRODUCT_BUNDLE_IDENTIFIER = com.deepseek.bankbreaknt;
 				SDKROOT = macosx;
-				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
